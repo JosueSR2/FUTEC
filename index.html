@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda Virtual</h1>
+        <nav>
+            <a href="#" id="view-cart">Ver Carrito</a>
+            <a href="#" id="view-profile">Perfil</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="product-list">
+            <h2>Productos</h2>
+            <div class="product">
+                <h3>Smartphone XYZ</h3>
+                <p>Precio: $300</p>
+                <button onclick="addToCart('Smartphone XYZ', 300)">Añadir al Carrito</button>
+            </div>
+            <div class="product">
+                <h3>Laptop ABC</h3>
+                <p>Precio: $800</p>
+                <button onclick="addToCart('Laptop ABC', 800)">Añadir al Carrito</button>
+            </div>
+        </section>
+
+        <section id="cart" style="display: none;">
+            <h2>Carrito de Compras</h2>
+            <ul id="cart-items"></ul>
+            <button onclick="checkout()">Realizar Compra</button>
+        </section>
+
+        <section id="profile" style="display: none;">
+            <h2>Perfil de Usuario</h2>
+            <form id="profile-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="button" onclick="updateProfile()">Actualizar Perfil</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda Virtual</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
